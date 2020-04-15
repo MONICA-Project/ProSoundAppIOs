@@ -1,46 +1,22 @@
-# Monica Foobar
+# Monica Professional Sound App
 <!-- Short description of the project. -->
-
-Foobar is not a real software. The name is used here as placeholder for a described software. This readme is meant for describing an application but can be adapted to describe a software library by changing `Deployment` section to `Usage`. 
+The professional sound app allows the user to see the sound level meter data from the MONICA system. It also provides functionality to give sound feedback to the COP indicating sound problems at certain place.  
 
 <!-- A teaser figure may be added here. It is best to keep the figure small (<500KB) and in the same repo -->
 
 ## Getting Started
 <!-- Instruction to make the project up and running. -->
+The app is developed in Swift using Apple XCode and is a pure iOS app. 
+Clone the repository and build the app in Apple XCode.
+The default endpoint it contacts the [COP APi](https://github.com/MONICA-Project/COP.API) is http://127.0.0.1:8800/
+Which matches the port in [Sound Monitoring an event using Sound Level Meters](https://github.com/MONICA-Project/DockerSoundDemo)
 
-The project documentation is available on the [Wiki](https://github.com/MONICA-Project/template/wiki).
-
-## Deployment
-<!-- Deployment/Installation instructions. If this is software library, change this section to "Usage" and give usage examples -->
-
-### Docker
-To run the latest version of foobar:
-```bash
-docker run -p 8080:80 foobar
+If another adress and port is to be used, locate the file "MonicaPro\AsyncTask.swift" and change:
 ```
-
-## Development
-<!-- Developer instructions. -->
-
-### Prerequisite
-This projects depends on xyz. Installation instructions are available [here](https://xyz.com)
-
-On Debian:
-```bash
-apt install xyz
+    private static let baseStart = "http://127.0.0.1:8800/"
 ```
+Change it to desired adress and port and rebuild.
 
-### Test
-Use tests.sh to run unit tests:
-```bash
-sh tests.sh
-```
-
-### Build
-
-```bash
-g++ -o app app.cpp
-```
 
 ## Contributing
 Contributions are welcome. 
