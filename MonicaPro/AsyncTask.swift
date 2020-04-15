@@ -10,7 +10,7 @@ import UIKit
 
 class AsyncTask: NSObject {
 
-    private static let baseStart = "https://127.0.0.1:8800/"
+    private static let baseStart = "http://127.0.0.1:8800/"
     private static let baseEnd = "cop/api/"
 
     
