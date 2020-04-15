@@ -10,8 +10,8 @@ import UIKit
 
 class AsyncTask: NSObject {
 
-    private static let baseStart = "https://portal.monica-cloud.eu/"
-    private static let baseEnd = "/cop/api/"
+    private static let baseStart = "https://127.0.0.1:8800/"
+    private static let baseEnd = "cop/api/"
 
     
     func jsonFromUrl(_ strUrl: String, postBody:Dictionary<String, Any>=Dictionary(), method:String?=nil, completion: @escaping (_ result: Any?) -> Void) {
